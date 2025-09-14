@@ -29,6 +29,7 @@ public class UserEventListenerImpl implements UserEventService {
             deftask.setDoneBy("NA");
             deftask.setStatus("Pending");
             deftask.setDescription("Complete your profile first for identify your roles");
+            deftask.setUser(username);
 
             taskService.addTask(deftask);
 

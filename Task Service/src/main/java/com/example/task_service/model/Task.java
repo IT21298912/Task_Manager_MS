@@ -10,9 +10,21 @@ public class Task {
     private Long id;
     @Column(nullable = false)
     private String taskname;
+
+    public Task(Long id, String taskname, String description, String status, String user, String doneBy) {
+        this.id = id;
+        this.taskname = taskname;
+        this.description = description;
+        this.status = status;
+        this.user = user;
+        this.doneBy = doneBy;
+    }
+
     @Column(nullable = false)
     private String description;
     private String status;
+
+    private String user;
 
     private String doneBy;
 
@@ -26,6 +38,14 @@ public class Task {
 
     public Task() {
 
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public Long getId() {
