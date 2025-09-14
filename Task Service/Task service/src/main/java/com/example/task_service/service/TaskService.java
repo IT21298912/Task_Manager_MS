@@ -17,5 +17,7 @@ public interface TaskService {
 
     String deleteTask(Long tid);
 
+    List<Task> getTaskDoneby(String uname);
+
 
 }

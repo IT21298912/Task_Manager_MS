@@ -3,6 +3,8 @@ package com.example.discovery.model;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "users") // optional, but good practice
 public class User {

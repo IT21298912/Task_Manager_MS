@@ -39,4 +39,11 @@ public class taskController {
     public String deleteTask(@PathVariable String tid){
         return taskService.deleteTask(Long.valueOf(tid));
     }
+
+    @GetMapping("/doneby/{uname}")
+    public List<Task> doneBy(@PathVariable String uname){
+
+        return taskService.getTaskDoneby(uname);
+    }
+
 }

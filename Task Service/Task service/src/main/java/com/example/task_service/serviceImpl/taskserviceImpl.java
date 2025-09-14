@@ -50,4 +50,9 @@ public class taskserviceImpl implements TaskService {
         repository.deleteById(Long.valueOf(tid));
         return "Task Deleted!!";
     }
+
+    @Override
+    public List<Task> getTaskDoneby(String uname) {
+        return repository.findByDoneBy(uname);
+    }
 }
